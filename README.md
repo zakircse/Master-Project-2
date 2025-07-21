@@ -2,13 +2,13 @@
 
 ## Drug Recommendation System Based on Sentiment Analysis Using Machine Learning
 
-ABSTRACT
+### ABSTRACT
 This project uses the Drug Review Dataset to understand user reviews regarding multiple drugs for different conditions. These reviews are in the form of numeric ratings and textual reviews. The textual reviews are analyzed to predict the polarity of its sentiment and classified into one of 2 classifications. Two classification models have been tested: LGBM and Random Forest. The highest accuracy is 90.8%, given by the Random Forest. The numeric rating is used to recommend the highly-rated drugs for a given condition to the user.
 
-DATASET
+### DATASET
 https://www.kaggle.com/jessicali9530/kuc-hackathon-winter-2018
 
-METHODOLOGY
+### METHODOLOGY
 Initially the data has been cleaned of null and empty values (preferred over imputation as imputing reviews desensitizes the aim of the study) and then sorted based on the user ratings. We have extracted the unique conditions to help base the recommendation system here along with extracting the top 10 user preferred drugs (based on highest, here 10 pointer).
 
 Textblob, a python library for NLP technique, is used to give a sentiment polarity and subjectivity of the review. TextBlob returns polarity and subjectivity of the given user review in sentence. The polarity lies between [-1,1], -1 defines a negative sentiment and 1 defines a positive sentiment.The subjectivity lies between [0,1], 0 defines a objective sentiment and 1 defines a subjective sentiment Negation words reverse the polarity. TextBlob has semantic labels that help with fine-tuned analysis. The correlation matrix for the cleaned and uncleaned reviews shows that the removal of stopwords and snowball stemmers are impacting the review to be having a completely different sentiment and hence cleaning is done without the stopwords removal.
@@ -21,7 +21,7 @@ Machine learning models such as LGBM, Random Forest that have been trained with 
 
 The models are trained to predict the target output,'Review Sentiment'.
 
-RESULTS
+### RESULTS
 LGBM has accuracy 90.6% with a TP of 28615. We can calculate the TN, FN, FP accordingly.
 
 Random Forest with Random Feature Elimination has an accuracy of about 90.8% with a higher TP of 28747(more sensitivity for this model).
