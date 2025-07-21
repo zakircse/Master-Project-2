@@ -1,6 +1,6 @@
 # Master-Project-2
 
-##Drug Recommendation System Based on Sentiment Analysis Using Machine Learning
+## Drug Recommendation System Based on Sentiment Analysis Using Machine Learning
 
 ABSTRACT
 This project uses the Drug Review Dataset to understand user reviews regarding multiple drugs for different conditions. These reviews are in the form of numeric ratings and textual reviews. The textual reviews are analyzed to predict the polarity of its sentiment and classified into one of 2 classifications. Two classification models have been tested: LGBM and Random Forest. The highest accuracy is 90.8%, given by the Random Forest. The numeric rating is used to recommend the highly-rated drugs for a given condition to the user.
